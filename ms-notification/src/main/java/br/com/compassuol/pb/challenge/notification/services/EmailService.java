@@ -29,14 +29,14 @@ public class EmailService {
     	    Message message = new MimeMessage(session);
     	    message.setFrom(new InternetAddress("challenge03week12@gmail.com"));
     	    message.setRecipient(Message.RecipientType.TO, new InternetAddress("tamiresxavierdesousa@gmail.com"));
-    	    message.setSubject("Assunto do email");
-    	    message.setText("Conteúdo do email");
+    	    message.setSubject("Email subject");
+    	    message.setText("Email content");
 
     	    Transport.send(message);
 
-    	    System.out.println("Email enviado com sucesso!");
+    	    System.out.println("Email successfully sent!");
     	} catch (MessagingException e) {
-    	    System.out.println("Erro ao enviar o email: " + e.getMessage());
+    	    System.out.println("Error sending the e-mail: " + e.getMessage());
     	}
     }
 }
