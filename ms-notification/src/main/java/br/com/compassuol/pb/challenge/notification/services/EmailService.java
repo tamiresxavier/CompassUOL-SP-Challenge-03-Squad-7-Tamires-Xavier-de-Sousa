@@ -11,8 +11,6 @@ import java.util.Properties;
 @Service
 public class EmailService {
     public void sendEmail(EmailDto emailDto) {
-        // Lógica para enviar o email
-        // Aqui você pode usar alguma biblioteca de envio de email, como JavaMail, Spring Mail, etc.
     	
     	Properties properties = new Properties();
     	properties.put("mail.smtp.host", "smtp.gmail.com");
@@ -34,9 +32,6 @@ public class EmailService {
     	    message.setSubject("Assunto do email");
     	    message.setText("Conteúdo do email");
 
-    	    // Você pode adicionar anexos, formatação de texto, etc. aqui se necessário
-
-    	    // Envie o email
     	    Transport.send(message);
 
     	    System.out.println("Email enviado com sucesso!");
